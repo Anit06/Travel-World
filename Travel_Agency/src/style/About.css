@@ -1,0 +1,237 @@
+.About {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.About__heading{
+  font-size: 38px;
+  font-weight: 600;
+  padding-top: 40px;
+  padding-bottom: 0;
+}
+
+.About__Container1 {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.Member1{
+    padding-top: 7%;
+    padding-bottom: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.About__Section1{
+    min-height: 13vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0 3% 0 9%;
+}
+
+.About__container2{
+    width: 100%;
+    overflow: hidden;
+}
+
+.About__container2 p, .About__container2 h3{
+  padding-top: 18px;
+  padding-bottom: 10px;
+}
+
+.About__container2 h3{
+  font-size: 20px;
+  font-weight: 600;
+}
+
+
+.container .About__text{
+    position: relative;
+    color: #4070F4;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.About__text.first-text{
+    color: #FFF;
+}
+
+.About__text.sec-text:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    border-left: 2px solid #4070F4;
+    animation: animate 4s steps(12) infinite;
+}
+@keyframes animate{
+    40%, 60%{
+        left: calc(100% + 4px);
+    }
+    100%{
+        left: 0%;
+    }
+}
+
+.About__Section2{
+  display: flex;
+  padding: 0 35px;
+}
+
+.About__container3{
+  display: flex;
+  width: 200px;
+  padding: 20px 0;
+  border-radius: 8px;
+  row-gap: 30px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.About__circular-progress{
+  position: relative;
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.About__circular-progress::before{
+  content: "";
+  position: absolute;
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.About__progress-value{
+  position: relative;
+  font-size: 25px;
+  font-weight: 600;
+  color: #2a50e8;
+}
+
+.About__Circle-text{
+  font-size: 20px;
+  font-weight: 500;
+  color: #606060;
+}
+
+.About__Section3{
+  display: flex;
+  font-size: 23px;
+  padding: 0 10%;
+}
+
+.About__Section3 a{
+  padding-right: 10px;
+}
+
+
+.About__card {
+    width: 300px;
+    height: 500px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0 36px;
+    perspective: 2500px;
+    margin: 0 50px;
+  }
+
+  .About__cover-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .About__wrapper {
+    transition: all 0.5s;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+  }
+  
+  .About__card:hover .About__wrapper {
+    transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+    box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  }
+  
+  .About__wrapper::before,
+  .About__wrapper::after {
+    content: "";
+    opacity: 0;
+    width: 100%;
+    height: 80px;
+    transition: all 0.5s;
+    position: absolute;
+    left: 0;
+  }
+  .About__wrapper::before {
+    top: 0;
+    height: 100%;
+    background-image: linear-gradient(
+      to top,
+      transparent 46%,
+      rgba(12, 13, 19, 0.5) 68%,
+      rgba(12, 13, 19) 97%
+    );
+  }
+  .About__wrapper::after {
+    bottom: 0;
+    opacity: 1;
+    background-image: linear-gradient(
+      to bottom,
+      transparent 46%,
+      rgba(12, 13, 19, 0.5) 68%,
+      rgba(12, 13, 19) 97%
+    );
+  }
+  
+  .About__card:hover .About__wrapper::before,
+  .About__wrapper::after {
+    opacity: 1;
+  }
+  
+  .About__card:hover .About__wrapper::after {
+    height: 120px;
+  }
+  .About__title {
+    width: 100%;
+    height: 22%;
+    background-color: #191c2932;
+    transition: transform 0.5s;
+  }
+  .About__card:hover .title {
+    transform: translate3d(0%, -50px, 100px);
+  }
+  
+  .About__character {
+    width: 100%;
+    background-color: #191c2932;
+    opacity: 0;
+    transition: all 0.5s;
+    position: absolute;
+    z-index: -1;
+  }
+  
+  .About__card:hover .About__character {
+    opacity: 1;
+    transform: translate3d(0%, -30%, 100px);
+    background-color: #191c2932;
+  }

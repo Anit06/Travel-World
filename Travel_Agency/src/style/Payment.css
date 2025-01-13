@@ -1,0 +1,87 @@
+/* Payment.css */
+
+.Payment {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .Payment__title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+  
+  .Payment .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .Payment .col {
+    flex: 1;
+    margin-right: 15px;
+  }
+  
+  .Payment .inputBox {
+    margin-bottom: 15px;
+  }
+  
+  .Payment .inputBox span {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .Payment .inputBox input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .Payment .flex {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .Payment .submit-btn {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .Payment__Card-Image{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .Payment__Card-Image img {
+    width: 70px;
+    height: 50px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .Payment__Card-Image img.selected {
+    border: 3px solid rgb(6, 147, 18);
+  }
+  
+  .Payment .submit-btn:hover {
+    background-color: var(--primary-color);
+  }
+  
+  /* Media query for responsive design */
+  @media (max-width: 600px) {
+    .Payment .row {
+      flex-direction: column;
+    }
+  
+    .Payment .col {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+  
